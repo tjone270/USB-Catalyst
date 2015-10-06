@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1060" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+            <connections>
+                <outlet property="UPDupdateLabelDown" destination="QFB-7c-Fy7" id="uDZ-2j-mUt"/>
+                <outlet property="UPDupdateLabelUp" destination="goK-9c-5wL" id="clt-ff-SqU"/>
+                <outlet property="UPDupdateProgressDown" destination="hf7-4a-p40" id="nZl-F9-oGt"/>
+                <outlet property="UPDupdateProgressUp" destination="yf7-pZ-Bev" id="pIt-j4-Qnx"/>
+                <outlet property="UPDupdateWindow" destination="tP8-WP-7z0" id="RO7-EF-z5Y"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+            <items>
+                <menuItem title="Catalyst Updater" id="1Xt-HY-uBw">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Catalyst Updater" systemMenu="apple" id="uQy-DD-JDr"/>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="Catalyst Updater" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="tP8-WP-7z0" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" utility="YES" documentModal="YES"/>
+            <rect key="contentRect" x="272" y="172" width="506" height="136"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1440"/>
+            <view key="contentView" id="VYt-ZT-LaY">
+                <rect key="frame" x="0.0" y="0.0" width="506" height="136"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <progressIndicator minValue="3" maxValue="4" doubleValue="3" style="bar" id="yf7-pZ-Bev">
+                        <rect key="frame" x="20" y="72" width="466" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </progressIndicator>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="goK-9c-5wL">
+                        <rect key="frame" x="18" y="99" width="470" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="USB Catalyst is updating to version ... Please be patient." id="dNX-TE-cKj">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <progressIndicator minValue="1" maxValue="3" doubleValue="1" indeterminate="YES" style="bar" id="hf7-4a-p40">
+                        <rect key="frame" x="20" y="46" width="466" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </progressIndicator>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="QFB-7c-Fy7">
+                        <rect key="frame" x="18" y="20" width="470" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Please wait..." id="xNW-mS-klF">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+        </window>
+    </objects>
+</document>
